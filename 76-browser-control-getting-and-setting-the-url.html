@@ -1,0 +1,37 @@
+<!-- Lesson 76.  Browser control:  Getting and setting the URL -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 76. Browser control:  Getting and setting the URL</title>
+	</head>
+
+	<body>
+		<div id="s1">The problem with life is that things change too quickly to enjoy them.  You absorb a bit of pop culture and it moves on.</div><br /><br /><br /><br /><br /><br /><br />
+		<div id ="s2">But if you <a href="JavaScript:void(0)" onClick="nav1();">Click here</a> you can navigate down this form.</div><br /><br /><br /><br /><br /><br /><br />
+		<div id ="s3">Or <a href="JavaScript:void(0)" onClick="nav2();">Click here</a> to browse a different website.</div><br /><br /><br /><br /><br /><br /><br />
+		<div id = "s4">Curious where we at?  <a href="JavaScript:void(0)" onClick="whereWeAt();">Click here</a> to learn where!</div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<div id="s5">Arriving at the Mariana Trench...</div><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function nav1() {
+/*	var currentSite = window.location.hostname;
+	var currentPath = window.location.pathname;
+	var destination = "http://" + currentSite + currentPath + "#s5";
+	window.location.href = destination; //Uncomment when website is live*/
+	window.location.href = "file:///c:/code/js/76-browser-control-getting-and-setting-the-url.html#s5";
+	}
+function nav2() {
+	window.location.href = "http://www.hotmail.com";
+}
+function whereWeAt() {
+	var locInfo = "<br /><br />Current location: " + window.location.href + "<br />";
+	locInfo += "Current domain: " + window.location.hostname + "<br />";
+	locInfo += "Current path: " + window.location.pathname + "<br />";
+	locInfo += "Current anchor: " + window.location.hash;
+	document.getElementById("s4").innerHTML += locInfo;
+}
+	</script>
+</html>

@@ -1,0 +1,39 @@
+<!-- Lesson 70.  Objects: Properties -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 70. Objects: Properties</title>
+	</head>
+
+	<body>The text below makes use of properties of an object.<br /><br />
+		<div id="div1"></div><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+var deal = {
+  cost: 30.00,
+  expired: true,
+  restrictions: "yes",
+  features: ["One per customer", "Coupon required", "Never expires"],
+  name: "Heckuva deal!",
+  market: "Tampa Region"
+};
+var curDisplay = "";
+curDisplay += "<em>This month's deal</em><br />";
+curDisplay += deal.name + "<br/>";
+curDisplay += "Cost: $" + deal.cost + "<br /><br /><em>Deal Features</em><br />";
+for (var i = 0; i < deal.features.length; i++) {
+	curDisplay += deal.features[i] + "<br/>";
+}
+curDisplay += deal.market + "<br/>";
+if (deal.expired) {
+	curDisplay += "This deal has EXPIRED." + "<br/>";
+}
+if ("restrictions" in deal) {
+	curDisplay += "Some restrictions apply." + "<br/>";
+}
+document.getElementById("div1").innerHTML += curDisplay;
+	</script>
+<html>

@@ -1,0 +1,35 @@
+<!-- Lesson 21.  Changing case -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 21. Changing case</title>
+	</head>
+
+	<body>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+var cityToCheck = prompt("Enter your city in any case (HAstINGs, hasTINGS, etc.)!  We will see if it is one of America's five cleanest cities.");
+cityToCheck = cityToCheck.toLowerCase();
+var cleanestCities = ["cheyenne", "davenport", "galena", "hastings", "las cruces", "newark"];
+
+isClean = false;
+for (var i = 0; i <= cleanestCities.length; i++) {
+	if (cityToCheck === cleanestCities[i]) {
+		isClean = true;
+		break;
+	}
+}
+if (isClean) {
+	alert("You live in one of the cleanest cities!");
+}
+else {
+	alert("Sorry! Your city is hazy and polluted.");
+}
+	
+//another option is to convert to UPPER CASE
+cityToCheck = cityToCheck.toUpperCase();
+	</script>
+</html>

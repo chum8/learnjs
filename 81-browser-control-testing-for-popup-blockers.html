@@ -1,0 +1,28 @@
+<!--  Lesson 81.  Browser control: Testing for popup blockers -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 81. Browser control: Testing for popup blockers</title>
+	</head>
+
+	<body onload="popUpTest();">
+		<div id="d1">
+			We are testing, testing...for popup blockers!
+		</div><br /><br />
+		<a href="index.html">Return to lesson list</a>		
+	</body>
+
+	<script>
+function popUpTest() {
+	var testPop = window.open("", "myTestPopUp", "width=100,height=100");
+	if (testPop === null || typeOf(testPop) === "undefined") {
+		alert("Disable your popup blocker for full access to this site.");
+	}
+	else {
+       	      	alert("Congrats, your popup blocker is off, giving you full access to this site.");
+	}
+	testPop.close();
+}
+	</script>
+</html>

@@ -1,0 +1,45 @@
+<!--  Lesson 36.  Functions: passing them data -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 36. Functions: passing them data</title>
+	</head>
+
+	<body>This code shows how to pass data to a function.
+		<pre>
+function greetUser() {
+	alert("Hello, there.");
+}
+
+//Instead of always making the greeting say, "Hello, there," you can do this.
+function betterGreetUser(greeting) {
+	alert(greeting);
+}
+
+betterGreetUser("Hello, there.");
+betterGreetUser("Hacker?  350,000,000,000 attempts left until the next second.");
+
+var curGreeting = "Hola!";
+betterGreetUser(curGreeting);
+
+var whatever = "Go west, young man!"'
+betterGreetuser(whatever);
+
+var almostAMil = 999999;
+betterGreetUser(almostAMil);
+
+//or
+betterGreetUser(999999);
+
+function showMessage(m, string, num) {
+	alert(m + string + num);
+}
+
+var month = "March";
+showMessage(month, "'s winner number is ", 23);
+
+//output is "March's winning number is 23."
+		</pre>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+</html>

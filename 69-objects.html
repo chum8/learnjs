@@ -1,0 +1,38 @@
+<!--  Lesson 69.  Objects -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 69. Objects</title>
+	</head>
+
+	<body>
+		These alerts reveal some variables for an object.<br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+	<script>
+var plan1 = {
+  name: "Basic",
+  price: 3.99,
+  space: 100,
+  transfer: 1000,
+  pages: 10
+};
+
+alert("The cost of the " + plan1.name + " package is $" + plan1.price + " per month.");
+
+plan1.discountMonths = [6, 7, 11];
+
+var myMonth = prompt("Enter the current month, i.e. 4 = April.");
+alert("You entered " + myMonth + ".");
+noDiscounts = true;
+for (var i = 0; i < plan1.discountMonths.length; i++) {
+	if (parseInt(myMonth) === plan1.discountMonths[i]) {
+	alert("Your current month is a discount month!");
+	noDiscounts = false;
+	}
+}
+if (noDiscounts) {
+	alert("No discounts available this month.");
+}
+	</script>
+</html>

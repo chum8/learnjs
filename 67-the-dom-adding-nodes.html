@@ -1,0 +1,27 @@
+<!-- Lesson 67.  The DOM:  Adding nodes -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 67. The DOM: Adding nodes</title>
+	</head>
+
+	<body>
+		<div id="place">
+			Nothing is below this line, but <a href="JavaScript:void(0)" onClick="craftNodes();">click</a> and there will be...!
+		</div><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function craftNodes() {
+	var parentDiv = document.getElementById("place");
+	var nodeToAdd = document.createElement("p");
+	nodeToAdd.setAttribute("class", "jumbo blue");
+//	nodeToAdd.innerHTML = "This doesn't work.";
+	var newTxt = document.createTextNode("This works!  We created a text node with certain attributes!");
+	nodeToAdd.appendChild(newTxt);
+	parentDiv.appendChild(nodeToAdd);
+}
+	</script>
+</html>

@@ -1,0 +1,33 @@
+<!-- Lesson 59.  The DOM:  Parents and children -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 59. The DOM: Parents and children</title>
+	</head>
+
+	<body>This chart shows the structure of children in the DOM
+		<pre>
+html: child of document
+	head: first child of html
+		title: child of head
+			Simple document
+		/title
+	/head
+	body: second child of html
+		div: child of body
+			p: first child of div
+				text in here is child of 1st p
+			/p
+			p: second child of div
+				text in here is child of 2nd p
+			/p
+			p em: child of em  /em /p
+		/div
+	/body
+/html
+		</pre><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+</html>
+

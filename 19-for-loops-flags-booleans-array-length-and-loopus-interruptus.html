@@ -1,0 +1,54 @@
+<!-- Lesson 19.  For loops:  Flags, booleans, array length, and loopus interruptus -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 19. For loops: Flags, booleans, array length, and loopus interruptus</title>
+	</head>
+
+	<body>
+	The code below demonstrates several ways to use for loops to check for conditions.  Lesson 18 implemented a boolean flag as well.
+	<pre>
+var matchFound = "no"; //This is a flag.  It will tell us if a condition was met.
+var cityToCheck = "Anaheim";
+var cleanestCities = ["Dallas", "L.A.", "New York", "Anaheim", "San Antonio"];
+
+for (var i = 0; i <= 4; i++); {
+	if (cityToCheck === cleanestCities[i]) {
+		matchFound = "yes"; //Changes the flag to "yes" because the condition was met.
+		alert("It's one of the cleanest cities");
+		break; //We found the cleanest city, so we can simply break out of the loop.
+	}
+}
+if (matchFound === "no") {
+	alert("It's not on the list");
+}
+
+var matchFound = false; //This is a Boolean flag.
+for (var i = 0; i <= 4; i++); {
+	if (cityToCheck === cleanestCities[i]) {
+		matchFound = true;
+		alert("It's one of the cleanest cities");
+		break;
+	}
+}
+if (matchFound === false) {
+	alert("It's not on the list");
+}
+
+var numElements = cleanestCities.length; //What if you don't know the array length?  Use .length to find out.
+var matchFound = false;
+for (var i = 0; i <= numElements; i++); { 
+	if (cityToCheck === cleanestCities[i]) {
+		matchFound = true;
+		alert("It's one of the cleanest cities");
+		break;
+	}
+}
+if (matchFound === false) {
+	alert("It's not on the list");
+}
+	</pre>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+</html>
+

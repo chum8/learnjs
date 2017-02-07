@@ -1,0 +1,49 @@
+body {
+	margin-left:40px;
+	margin-top:40px;
+	font-family:verdana,sans-serif;
+	font-size:14px;
+}
+body .em1 {
+	font-size:18px;
+	font-style:bold:
+	font-family:verdana,sans-serif;
+}
+body .floated {
+	float:left;
+	clear:both;
+}
+
+.divided {
+	width:340px;
+	margin-left:10px;
+	float:left;
+	position:relative;
+}
+
+#lessonsDivided {
+	width:340px;
+	margin-left:80px;
+	clear:both;
+}
+
+#olWrapper {
+	width:800px;
+	padding:20px 80px 20px 80px;
+	clear:both;
+}
+
+.lessons {
+	width:150px;
+	float:left;
+	position:relative;
+}
+
+.hidden {display:none;}
+.small {font-size:7;}
+.normal {font-size:12;}
+.large {font-size:16;}
+.big {font-size:18;}
+.jumbo {font-size:44;}
+.green {color:#0F0;}
+.blue {color:#05F;}

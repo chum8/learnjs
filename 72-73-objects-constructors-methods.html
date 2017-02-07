@@ -1,0 +1,38 @@
+<!-- Lesson 72-73.  Objects: Constructors for methods -->
+<!-- It made sense to integrate lessons 72 and 73 together. -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 72-73. Objects: Constructors for methods</title>
+	</head>
+
+	<body>I combined lessons 72 and 73 into one file.<br /><br />
+		Plan prices per month are $3.99, $5.99 and $9.99.<br /><br />
+		<div id="div1"></div><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function Plan(name, price, space, transfer, pages) {
+	this.name = name;
+  	this.discount = .75;
+	this.price = price;
+	this.space = space;
+	this.transfer = transfer;
+	this.pages = pages;
+	this.calcAnnual = function(months, theDiscount) {
+		return ((this.price * months) - ((this.price * months) * theDiscount)).toFixed(2);
+	};
+}
+
+var plan1 = new Plan("Basic", 3.99, 100, 1000, 10);
+var plan2 = new Plan("Premium", 5.99, 500, 5000, 50);
+var plan3 = new Plan("Ultimate", 9.99, 2000, 20000, 500);
+var discount = prompt("Enter the discount the customer will receive on their internet bundle as a whole number.  (for example, enter \"4\" for a discount of 4%)");
+var months = prompt("Enter the length of the contract in months.");
+
+document.getElementById("div1").innerHTML = "Your total price for " + months + " months for " + plan1.name + " plan is $" + plan1.calcAnnual(months, discount / 100) + " after applying a " + discount + "% discount.  Before this discount was applied, your price was $" + plan1.calcAnnual(months, 0) + ".<br/>";
+document.getElementById("div1").innerHTML += "Your total price for " + months + " months for " + plan2.name + " plan is $" + plan2.calcAnnual(months, discount / 100) + " after applying a " + discount + "% discount.  Before this discount was applied, your price was $" + plan2.calcAnnual(months, 0) + "<br/>";
+document.getElementById("div1").innerHTML += "Your total price for " + months + " months for " + plan3.name + " plan is $" + plan3.calcAnnual(months, discount / 100) +  " after applying a " + discount + "% discount.  Before this discount was applied, your price was $" + plan3.calcAnnual(months, 0) + "<br/>";
+	</script>
+</html>

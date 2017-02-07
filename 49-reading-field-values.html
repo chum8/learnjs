@@ -1,0 +1,27 @@
+<!-- Lesson 49.  Reading field values -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 49. Reading field values</title>
+	</head>
+
+	<body>An attempt to submit an empty text field will fail.<br /><br />
+		<form onSubmit="checkAddress('email');">
+			Email:<br />
+			<input type="text" id="email" />
+			<input type="submit" value="Submit Your E-mail Address" />
+		</form>
+		<br /><br />
+		<a href="index.html">Return to lesson list</a>		
+	</body>
+
+	<script>
+function checkAddress(fieldId) {
+	var val = document.getElementById(fieldId).value;
+	if (val === "") {
+		alert("Email address required.");
+	}
+}
+	</script>
+
+</html>

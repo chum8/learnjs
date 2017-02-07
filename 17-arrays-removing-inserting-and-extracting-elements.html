@@ -1,0 +1,29 @@
+<!--  Lesson 17.  Arrays: Removing, inserting and extracting elements -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 17. Arrays: Removing, inserting and extracting elements</title>
+	</head>
+
+	<body>
+	This code shows how to remove, insert and extract elements from an array.
+	<pre>
+var pets = ["dog", "bird", "squirrel", "raccoon"];
+pets.shift(); //remove first element
+
+pets.unshift("fish", "ferret"); //add to beginning of array
+
+pets.splice(2, 2, "pig", "duck", "emu"); //start with element two.  Delete two elements (after the ones you splice in).  Add "pig", "duck" and "emu"
+
+pets.splice(2, 0, "wasp", "bee"); //doesn't delete any elements
+
+pets.splice(1, 4); //removes without adding new elements
+
+var noPets = pets.slice(2, 4); //takes elements two and four and copies them to new array.  The second index indicates element AFTER the last element to be copied (careful!)
+
+pets = pets.slice(1, 3); //reduces array to elements sliced
+	</pre>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+</html>

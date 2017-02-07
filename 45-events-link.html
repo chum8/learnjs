@@ -1,0 +1,24 @@
+<!-- Lesson 45. Events: Link -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 45. Events: Link</title>
+	</head>
+
+	<body>
+		<a href="#" onClick="alert('You clicked it!');">Click Me</a><br/>
+
+		<!-- better practice, calling a function-->
+		<a href="JavaScript:void(0)" onClick="alert('Hi again!');">Click Me</a><br/>
+		<a href="JavaScript:void(0)" onClick="var greet='And again.'; alert(greet);">Click Me</a><br/>
+		<a href="JavaScript:void(0)" onClick="popup('Tired of this?');">Click Me</a><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function popup(message) {
+	alert(message);
+}
+	</script>
+</html>

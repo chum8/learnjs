@@ -1,0 +1,22 @@
+<!--  Lesson 27.  Generating random numbers -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 27. Generating random numbers</title>
+	</head>
+
+	<body>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+	
+	<script>
+var randomNumber = Math.random();  //returns a number that can be made whole by multiplying by a quadrillion
+
+//to equalize the random chances, you have to add one
+var desiredRange = prompt("We're going to generate a random number between 1 and n.  Enter n.");
+var bigDecimal = Math.random();
+var improvedNum = (bigDecimal * desiredRange) + 1;
+var numberOfStars = Math.floor(improvedNum); //returns a number between 1 and desiredRange
+	alert("Your random number is " + numberOfStars);
+	</script>
+</html>

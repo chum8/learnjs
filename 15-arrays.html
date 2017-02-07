@@ -1,0 +1,27 @@
+<!--  Lesson 15.  Arrays -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 15. Arrays</title>
+	</head>
+
+	<body>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+//Inefficient way
+var city0 = "Atlanta";
+var city1 = "Baltimore";
+var city2 = "Chicago";
+//etc.
+
+//Using array
+var cities = ["Atlanta", "Baltimore", "Chicago", "Denver", "Los Angeles", "Seattle"];
+myCity = prompt("Enter a number between 1 and 6 to be welcomed to a certain city.");
+alert("Welcome to " + cities[myCity - 1]);
+
+var mixedArray = [1, "Bob", "Now is", true]; //Example of a mixed array
+	</script>
+
+</html>

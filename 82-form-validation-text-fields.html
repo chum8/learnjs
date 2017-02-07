@@ -1,0 +1,33 @@
+<!--  Lesson 82.  Form validation: Text fields -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 82. Form validation: Text field</title>
+	</head>
+
+	<body>
+		<form onSubmit="return checkForLastName();">
+			Please enter your last name.<br/>
+			<input type="text" id="lastNameField">
+			<input type="submit" value = "Submit Form">
+		</form><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+	
+	<script>
+function checkForLastName() {
+	var targetField = document.getElementById("lastNameField");
+	if (targetField.value.length === 0) {
+		alert("Please enter your last name");
+		targetField.focus();
+		targetField.style.background = "yellow";
+		return false;
+	}
+	targetField.style.background = "white";
+	alert("Congratulations, you entered some text.");
+	return true;
+}
+	</script>
+</html>
+

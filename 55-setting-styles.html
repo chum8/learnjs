@@ -1,0 +1,48 @@
+<!--Lesson 55.  Setting styles -->
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="js-helper.css" />
+		<title>JavaScript Lesson 55. Setting styles</title>
+	</head>
+
+	<body>
+		<div id="p1" onClick="makeBig();">Click this text to enlarge it.</div><br /><br />
+
+		Click on the right shield to change some float properties.<br /><br />
+		<img src="images\fsr001.jpg" id="pic1" />
+		<img src="images\Ryan-Irish-Crest.jpg" id="pic2" onClick="floatLeft();" /><br /><br />
+
+		Click the shield below to hide it.<br /><br />
+		<img src="images\Ryan-Irish-Crest.jpg" id="pic99" onClick="hideIt();" /><br /><br />
+	
+		Click the shield below to reveal margin property.<br /><br />
+		<img src="images\fsr001.jpg" id="pic3" onClick="tellMargins();" /><br /><br />
+		Current margin is: <p id="myMargin"></p>
+		<a href="JavaScript:void(0)" onClick="changeMargins();">Click here to change some margins!</a>
+		<br /><br /><a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function makeBig() {
+	document.getElementById("p1").style.fontSize = "2em";
+}
+function floatLeft() {
+	document.getElementById("pic1").style.cssFloat = "left";
+	document.getElementById("pic2").style.cssFloat = "left";
+}
+function hideIt() {
+	document.getElementById("pic99").style.visibility = "hidden";
+}
+function changeMargins() {
+	document.getElementById("pic3").style.margin = "0 79px 0 73px";
+}
+function tellMargins() {
+	var currentMargin = document.getElementById("pic3").style.margin;
+	if (currentMargin == "") {
+		currentMargin = "Default";
+	}
+	document.getElementById("myMargin").innerHTML += currentMargin + "<br />";
+}
+	</script>
+</html>

@@ -1,0 +1,29 @@
+<!-- Lesson 18.  For loops -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 18. For loops</title>
+	</head>
+
+	<body>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+var cleanestCities = ["Cheyenne", "Santa Fe", "Tucson", "Great Falls", "Honolulu"];
+var cityToCheck = prompt("Type in the name of your city.  We'll let you know if it's one of the five cleanest cities in America.");
+var isClean = false;
+for (var i = 0; i <= 4; i++) {
+	if (cityToCheck === cleanestCities[i]) {
+		isClean = true;
+	}
+}
+
+if (isClean) {
+	alert("Your city is one of the five cleanest!");
+}
+else {
+	alert("Sorry! Your city is a trash heap. The EPA hotline is 1-800-GO-EPA.");
+}
+	</script>
+</html>

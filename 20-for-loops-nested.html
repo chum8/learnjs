@@ -1,0 +1,22 @@
+<!-- Lesson 20.  For loops nested -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 20. For loops nested</title>
+	</head>
+
+	<body>If we wanted to generate a list of rapper names, the following code would do it using a nested For loop.
+	<pre>
+var firstNames = ["BlueRay ", "Upchuck ", "Lojack ", "Gizmo", "Do-Rag "];
+var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
+var fullNames = [];
+
+for (var i = 0; i < firstNames.length; i++) {
+	for (var j = 0; j < lastNames.length; j++) {
+		fullNames.push(firstNames[i] + lastNames[j]);
+		}
+}
+	</pre>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+</html>

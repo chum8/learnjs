@@ -1,0 +1,47 @@
+<!-- Lesson 22.  Strings:  Measuring length and extracting parts -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 22. Strings: Measuring length and extracting parts</title>
+	</head>
+
+	<body>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+var cityToCheck = prompt("Enter some text like \"howDY\" to see if formatted correctly!");
+firstChar = cityToCheck.slice(0, 1);
+var otherChars = cityToCheck.slice(1);
+firstChar = firstChar.toUpperCase();
+otherChars = otherChars.toLowerCase();
+var cappedCity = firstChar + otherChars;
+alert("The formatted version of your input is " + cappedCity);
+
+//measuring length
+var month = prompt("Enter a month!");
+var charsInMonth = month.length;
+if (charsInMonth > 3) {
+	monthAbbrev = month.slice(0, 3);
+}
+alert("The abbreviated version of the month is " + monthAbbrev);
+
+//checking for double spaces
+var str = prompt("Enter some text!");
+var numChars = str.length;
+hasDoubleSpaces = false;
+for (var i = 0; i < numChars; i++) {
+	if (str.slice(i, i + 2) === "  ") {
+		hasDoubleSpaces = true;
+		break;
+		}
+}
+if (hasDoubleSpaces) {
+	alert("You shouldn't enter double spaces.");
+}
+else {
+	alert("No double spaces detected.");
+}
+	</script>
+</html>
+

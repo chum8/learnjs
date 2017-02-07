@@ -1,0 +1,21 @@
+<!-- Lesson 46.  Events: Button-->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 46. Events: Button</title>
+	</head>
+
+	<body>
+		<input type="button" value="Click this button!" onClick="alert('Hello world!');" /><br /><br />
+		Click on the shields to see what happens.<br /><br />
+		<img src="images\fsr001.jpg" onClick="alert('My family crest!');" />
+		<img src="images\fsr001.jpg" onClick="greetTheUser();" />
+		<br /><br /><a href="index.html">Return to lesson list</a>
+	</body>	
+	
+	<script>
+function greetTheUser() {
+	alert('A second time!');
+}
+	</script>
+</html>

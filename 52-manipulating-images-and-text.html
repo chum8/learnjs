@@ -1,0 +1,29 @@
+<!-- Lesson 52.  Manipulating images and text -->
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="js-helper.css" />
+		<title>JavaScript Lesson 52. Manipulating images and text</title>
+	</head>
+
+	<body>Click on the shield to see what happens.<br /><br />
+		<img src="images\fsr001.jpg" id="ugly" onClick="makeInvisible();" />
+		<p id="p1"  onMouseover="makeBig();" onMouseout="notBig();">	
+			Move the mouse here to watch the text change!!!
+		</p>
+		<br /><br /><a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function makeInvisible() {
+	document.getElementById("ugly").className = "hidden";
+}
+
+function makeBig() {
+	document.getElementById("p1").className = "big";
+}
+function notBig() {
+	document.getElementById("p1").className = "normal";
+}
+
+	</script>
+</html>

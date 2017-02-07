@@ -1,0 +1,29 @@
+<!--  Lesson 86.  Form validation: Email -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 86. Form validation: Email</title>
+	</head>
+	
+	<body>
+		<form onSubmit="return validateEmail(myEmail.value);">
+			Please enter your email address.<br />
+			<input type="text" id="myEmail" width=200 /><br />
+			<input type="submit" value="Submit!"/>
+		</form><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function validateEmail(myEmail) {
+	var eEntered = myEmail;
+	var emailCorrectPattern = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+	if (!(eEntered.match(emailCorrectPattern))) {
+		alert("Please correct the e-mail address.");
+		return false;
+	}
+	alert("Congratulations, you entered a valid e-mail address.");
+	return true;
+}
+	</script>
+</html>

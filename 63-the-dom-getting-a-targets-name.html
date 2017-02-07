@@ -1,0 +1,28 @@
+<!-- Lesson 63.  The DOM: Getting a target's name -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 63. The DOM: Getting a target's name</title>
+	</head>
+	
+	<body>
+		<h1 id="myHeading">Do <em>not</em> hit!</h1>
+		<a href="JavaScript:void(0)" onClick="nodeTask1();">Click to change just a node's text</a><br />
+		<a href="JavaScript:void(0)" onClick="nodeTask2();">Click to change the entire innerHTML</a><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+	
+	<script>
+function nodeTask1() {
+	var myParent = document.getElementById("myHeading");
+	var myTarget = myParent.firstChild;
+	myTarget.nodeValue += " (first add text) ";
+}
+function nodeTask2() {
+	var myParent = document.getElementById("myHeading");
+	myParent.innerHTML = " And do not spit!";
+}
+	</script>
+
+</html>

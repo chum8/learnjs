@@ -1,0 +1,24 @@
+<!--  Lesson 53.  Swapping Images -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 53. Swapping images</title>
+	</head>
+
+	<body class="floated">Click the left shield and move the mouse over the right shield to see what happens.<br /><br />
+		<span class="divided"><img src="images\Ryan-Irish-Crest.jpg" id="before" onClick="swapPic();" onMouseout="swapIt(id, 'images\\Ryan-Irish-Crest.jpg');" /></span>
+		<span class="divided"><img src="images\fsr001.jpg" id="secondChance" onMouseover="swapIt(id, 'images\\Ryan-Irish-Crest.jpg');" onMouseout="swapIt(id, 'images\\fsr001.jpg');" /></span>
+		<span class="floated"><br /><br /><a href="index.html">Return to lesson list</a></span>
+	</body>
+
+	<script>
+function swapPic() {
+	document.getElementById("before").src = "images\\fsr001.jpg";
+}
+
+function swapIt(eId, newPic) {
+	document.getElementById(eId).src = newPic;
+}
+	</script>
+</html>

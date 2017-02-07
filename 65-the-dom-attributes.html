@@ -1,0 +1,37 @@
+<!-- Lesson 65.  The DOM:  Attributes -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 65. The DOM: Attributes</title>
+	</head>
+
+	<body>
+		<div id="p1" class="big">
+			<p class="large">
+				Some text.  Some more text.  I am Irish.<br /><br />
+				<img src="images\fsr001.jpg" />
+				<!-- each of the above tags has an attribute -->
+			</p>
+			<a href="JavaScript:void(0)" onClick="peekAttributes(); changeAttribute();">Click to see if target "p1" has attribute "class."  Also, change some text attributes.  Buckle up!</a>
+		</div><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function peekAttributes() {
+	var myTarget = document.getElementById("p1");
+	if (myTarget.hasAttribute("class")) {
+		alert("Your target has the attribute.");
+	}
+	else {
+		alert("Sorry, no dice.");
+	}
+}
+
+function changeAttribute() {
+	var myTarget = document.getElementsByTagName("p");
+	myTarget[0].setAttribute("class", "small");
+	myTarget[0].innerHTML += "<br /><br />Oh yikes.  Who changed the text size?";
+}
+	</script>
+</html>

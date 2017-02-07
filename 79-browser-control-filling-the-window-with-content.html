@@ -1,0 +1,23 @@
+<!--  Lesson 79.  Browser control: Filling the window with content -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 79. Browser control: Filling the window with content</title>
+	</head>
+	
+	<body>This page attempts to open a pop up window.<br /><br />
+		<a href="JavaScript:void(0)" onClick="popUp();">Click</a> to open Lesson 74 as an additional pop up window.
+		<br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+var monkeyWindow = window.open();
+var windowContent = "<html><body><h1>Capuchin monkey</h1><p>Some stuff about the monkey...</p></body></html>";
+monkeyWindow.document.write(windowContent);
+function popUp() {
+	var monkeyWindow = window.open("file:///c:/code/js/74-objects-prototypes.html");
+}
+	</script>
+</html>

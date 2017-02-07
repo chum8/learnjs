@@ -1,0 +1,26 @@
+<!--  Lesson 32.  Extracting parts of the date and time -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 32. Extracting parts of the date and time</title>
+	</head>
+
+	<body>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+var d = new Date();
+
+var currentMonth = d.getMonth();
+var dayOfMonth = d.getDate();
+var currYr = d.getFullYear();
+var currentHrs = d.getHours();
+var currMins = d.getMinutes();
+var currSecs = d.getSeconds();
+var currMills = d.getMilliseconds();
+var millsSince = d.getTime();
+
+alert("Month = " + currentMonth + "\nDay = " + dayOfMonth + "\nYear = " + currYr + "\nHours = " + currentHrs + "\nMinutes = " + currMins + "\nSeconds = " + currSecs + "\nMilliseconds = " + currMills + "\nTime since 1-1-1970 = " + millsSince);
+	</script>
+</html>

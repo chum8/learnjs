@@ -1,0 +1,42 @@
+<!--  Lesson 24.  Strings: Finding a character at a location -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 24. Strings: Finding a character at a location</title>
+	</head>
+
+	<body>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+var firstName = prompt("Tell us your first name!");
+var firstChar = firstName.slice(0, 1);
+alert("The first letter of your name is " + firstChar);
+
+//A more direct way
+firstChar = firstName.charAt(0);
+
+var name = prompt("Tell us your full name!");
+var lastChar = name.charAt(name.length - 1); //finds last character of the string
+alert("The last letter of your name is " + lastChar);
+
+//find an exclamation point
+name = prompt("Enter some text, and we'll tell you if it has an exclamation point.");
+var hasExc = false;
+for (var i = 0; i < name.length; i++) {
+	if (name.charAt(i) === "!") {
+		hasExc = true;
+		break;
+	}
+}
+if (hasExc) {
+	alert("We found an exclamation point in your text.");
+}
+else {
+	alert("No exclamation points were found!");
+}
+//note: indexOf can only identify a character at a location.  It can't change the character.
+	</script>
+</html>

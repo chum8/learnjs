@@ -1,0 +1,31 @@
+<!-- Lesson 57.  Target some elements by tag name -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson  57. Target some elements by tag name</title>
+	</head>
+
+	<body>
+		<p>I do not want to get these paragraphs.</p>
+		<p>...</p>
+		<p>...</p>
+		<div id="y">
+			<p>I just want to get these ones.</p>
+			<p>....</p>
+			<p>....</p>
+			<a href="JavaScript:void(0)" onClick="modParas();">Modify just "these ones."</a>
+		</div><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function modParas() {
+	var e = document.getElementById("y");
+	var paras = e.getElementsByTagName("p");
+	for (i = 0; i < paras.length; i++) {
+		paras[i].innerHTML += " Succeeded."
+	}
+}
+	</script>
+</html>

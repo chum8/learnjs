@@ -1,0 +1,36 @@
+<!--  Lesson 85.  Form validation: Zip codes -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 85. Form validation: Zip codes</title>
+	</head>
+	
+	<body>
+		<form onSubmit="return validateZips();">
+			Please enter your zip code.<br />
+			<input type="text" id="zip" /><br />
+			<input type="submit" value="Submit!"/>
+		</form><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function validateZips() {
+	var zip = document.getElementById("zip").value;
+	if (zip.length !== 5) {
+		alert("Please enter a 5-digit-code.");
+		return false;
+	}
+	for (var i = 0; i <=4; i++) {
+		var thisChar = parseInt(zip[i]);
+		if (isNaN(thisChar)) {
+			alert("You must enter numbers.");
+			return false;
+		}
+	}
+	alert("Congratulations, you entered a valid ZIP code.");
+	return true;
+}
+	</script>
+</html>

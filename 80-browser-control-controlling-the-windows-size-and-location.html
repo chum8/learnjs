@@ -1,0 +1,27 @@
+<!--  Lesson 80.  Browser control: Controlling the window's size and location -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 80. Browser control: Controlling the window's size and location</title>
+	</head>
+
+	<body>
+		<a href="JavaScript:void(0)" onClick="popUp();">Click</a> to open a pop up window with a certain size (not supported in all browsers).<br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+	
+	<script>
+function popUp() {
+	var winWidth = prompt("Window width in pixels? (Minimum 100 px)");
+	var winHeight = prompt("Window height in pixels?  (Miminum 100 px)");
+	var winLeft = prompt("Window left placement in pixels?");
+	var winTop = prompt("Window top placement in pixels?");
+	var monkeyWindow = window.open("", "win1", "width=" + winWidth + ",height=" + winHeight + ",left=" + winLeft + ",top=" + winTop);
+
+	// 	test line of code
+	//	var additionalWindow = window.open("", "win2", "width=300,height=340,left=500,top=440");
+	// 	note.  I found that left and top worked in Firefox but not Edge
+}
+	</script>
+</html>

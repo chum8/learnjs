@@ -1,0 +1,31 @@
+<!-- Lesson 30.  Controlling the length of decimals -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 30. Controlling the length of decimal</title>
+	</head>
+
+	<body>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+var price = parseFloat(prompt("What did the item cost?  We'll add a tax of 6.5%."));
+var taxRate = 0.065;
+var total = price + (price * taxRate); //but now needs to be rounded
+
+//to resolve unpredictability in rounding
+var str = total.toString();
+if (str.charAt(str.length - 1) === "5") {
+	str = str.slice(0, str.length - 1) + "6";
+}
+var num = parseFloat(str);
+var prettyNum = num.toFixed(2);
+alert("Your total cost is $" + prettyNum);
+
+//a little more practice slicing strings, this time acting like we want to force a round down
+if (str.charAt(str.length - 1) === "5") {
+	str = str.slice(0, str.length - 1) + "4";
+}
+	</script>
+</html>

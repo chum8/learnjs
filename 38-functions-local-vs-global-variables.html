@@ -1,0 +1,43 @@
+<!--  Lesson 38.  Functions: Local vs. global variables -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 38. Functions: Local vs. global variables</title>
+	</head>
+
+	<body>This example shows how local and global variables are used
+		<pre>
+var theSum;
+addNumbers();
+
+function addNumbers() {
+	theSum = 2 + 2; //changing a global variable within the function = bad pratice
+}
+alert(theSum); //works because theSum has global scope
+
+function addNumbers2() {
+	var mySum = 2 + 2;
+}
+addNumbers2();
+alert(mySum); //problem!  mySum has only local scope
+
+//another bad practice
+var myVar = 1000;
+addNumbers3();
+function addnumbers3() {
+	var myVar = 12 - 11;
+}
+//global myVar still == 1000
+
+//to change the global variable...
+var yourVar = 300;
+yourVar = addNumbers4();
+function addnumbers4() {
+	var yourVar = 99 + 77;
+	return yourVar; 
+}
+//global yourVar now == 176.
+		</pre>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+</html>

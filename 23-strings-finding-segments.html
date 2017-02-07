@@ -1,0 +1,31 @@
+<!--  Lesson 23.  Strings: Finding segments -->
+<html>
+	<head>
+		<title>JavaScript Lesson 23. Strings: Finding segments</title>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+	</head>
+
+	<body>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+var text = "a bunch of text with the phrase World War II which we are not supposed to have.";
+alert("We need to substitute \"the Second World War\" into the following text: " + text);
+
+for (var i = 0; i < text.length; i++) {
+	if (text.slice(i, i + 12) === "World War II") {
+		text = text.slice(0, i) + "the Second World War" + text.slice(i + 12);
+	}
+}
+alert("The result is: " + text);
+
+//a more efficient way
+var firstChar = text.indexOf("World War II"); //returns index of first character of segment, assigns -1 if it doesn't exist
+if (firstChar !== -1) {
+	text = text.slice(0, firstChar) + "the Second World War" + text.slice(firstChar + 12);
+}
+
+//more practice
+text = "To be or not to be.";
+var segIndex = text.lastIndexOf("be");  //returns 16, the index of "b" in the second "be"

@@ -1,0 +1,23 @@
+<!--  Lesson 9.  Prompts -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 9. Prompts</title>
+	</head>
+
+	<body>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+var question = "Your species?";
+var defaultAnswer = "human";
+spec = prompt(question, defaultAnswer);
+
+var numberOfCats = prompt("How many cats?");
+var tooManyCats = numberOfCats + 1;
+
+alert("Adding 1 cat.  Now we have " + tooManyCats + " cats.  This returns an error because the script is treating the variables like strings, not numbers.");
+	</script>
+</html>

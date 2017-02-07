@@ -1,0 +1,36 @@
+<!--  Lesson 83.  Form validation: Drop downs -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 83. Form validation: Drop downs</title>
+	</head>
+
+	<body>
+		<form onSubmit="return checkForSelection('states');">
+			<select id="states">
+				<option value="" selected="selected">
+				SELECT A STATE</option>
+				<option value="CO">Colorado</option>
+				<option value="IN">Indiana</option>
+				<option value="NE">Nebraska</option>
+				<option value="NC">North Carolina</option>
+			</select>&nbsp;&nbsp;
+		<input type="submit" value = "Submit Form">
+		</form><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+	
+	<script>
+function checkForSelection(selecID) {
+	var target = document.getElementById(selecID);
+	if (target.selectedIndex === 0) {
+		alert("Please select a state.");
+		return false;
+	}
+	alert("Congratulations, you selected a state.");
+	return true;
+}
+	</script>
+</html>
+

@@ -1,0 +1,38 @@
+<!--  Lesson 33.  Specifying a date and time -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 33. Specifying a date and time</title>
+	</head>
+
+	<body>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+//How many days until social security goes broke?
+
+var today = new Date();
+
+var doomsday = new Date("June 30, 2035");
+
+var msToday = today.getTime();
+var msDoomsday = doomsday.getTime();
+
+var msDiff = msDoomsday - msToday;
+
+var calcYrs = (1000 * 60 * 60 * 24);
+
+var dDiff = msDiff / calcYrs;
+
+dDiff = Math.floor(dDiff);
+
+//condensed
+msDiff = new Date("June 30, 2035").getTime() - new Date().getTime();
+var daysTillDoom = Math.floor(msDiff / (1000 * 60 * 60 * 24));
+alert("Social security will go broke in " + daysTillDoom + " days, presuming it goes broke on June 30, 2035.");
+
+//specifying time
+var d = new Date("July 21, 1983 13:24:00"); //no comma after date
+	</script>
+</html>

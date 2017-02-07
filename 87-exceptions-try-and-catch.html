@@ -1,0 +1,25 @@
+<!--  Lesson 87.  Exceptions: Try and catch -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 87. Exceptions: Try and catch</title>
+	</head>
+
+	<body onLoad="greetWorld();">This page is intentionally executing a command that has a typo, and alerting the user to the resulting error.
+		<div id="myDiv" onLoad="greetWorld();"></div><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function greetWorld() {
+	try {
+		var greeting = "Hello world!";
+		aler(greeting); //intentional mistake
+	}
+	catch(err) {
+		alert(err);
+	}
+}
+	</script>
+</html>

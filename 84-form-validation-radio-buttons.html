@@ -1,0 +1,32 @@
+<!--  Lesson 84.  Form validators: Radio buttons -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 84. Form validators: Radio buttons</title>
+	</head>
+	
+	<body>
+		<form onSubmit="return validateRadios();">
+			<input type="radio" name="r1" value="vanilla"> Vanilla<br />
+			<input type="radio" name="r1" value="chocolate"> Chocolate<br />
+			<input type="radio" name="r1" value="raspberry"> Raspberry<br />
+			<input type="submit" value="Submit!"/>
+		</form><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function validateRadios() {
+	var radios = document.getElementsByName("r1");
+	for (var i = 0; i < radios.length; i++) {
+		if (radios[i].checked) {
+			alert("Congratulations, you selected a flavor.");
+			return true;
+		}
+	}
+	alert("Select a flavor.");
+	return false;
+}
+	</script>
+</html>

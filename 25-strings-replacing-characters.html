@@ -1,0 +1,35 @@
+<!--  Lesson 25.  Strings:  Replacing characters -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 25. Strings: Replacing characters</title>
+	</head>
+
+	<body>
+		Here are some other ways to replace characters and text segments.
+		<pre>
+var text = "a bunch of text with the phrase World War II which we are not supposed to have.";
+
+for (var i = 0; i < text.length; i++) {
+	if (text.slice(i, i + 12) === "World War II") {
+		text = text.slice(0, i) + "the Second World War" + text.slice(i + 12);
+	}
+}
+
+//a more efficient way
+var firstChar = text.indexOf("World War II"); //returns index of first character of segment, assigns -1 if it doesn't exist
+if (firstChar !== -1) {
+	text = text.slice(0, firstChar) + "the Second World War" + text.slice(firstChar + 12);
+}
+
+//the most efficient way yet!
+var newText = text.replace("World War II", "the Second World War");
+
+text = text.replace("World War II", "the Second World War"); //but only replaces first instance
+
+newText = text.replace(/World War II/g, "the Second World War"); //global replace -- replaces all instances.
+		</pre>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+</html>
+

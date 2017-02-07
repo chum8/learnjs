@@ -1,0 +1,57 @@
+<!--  Lesson 37.  Functions: Passing data back from them -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 37. Functions: Passing data back from them</title>
+	</head>
+
+	<body>This example shows how to pass data back from a function
+		<pre>
+//we want to add a different surcharge depending on the total
+var orderTot;
+if (merchTot >= 100) {
+	orderTot = merchTot;
+}
+else if (merchTot < 50.01) {
+	orderTot = merchTot + 5;
+}
+else (
+	orderTot = merchTot + 5 + (.03 * (merchTot - 50));
+}
+
+//same code, but as a function
+function calcTot(merchTot) {
+	var oTot;
+	if (merchTot >=100 ) {
+		oTot = merchTot;
+	}
+	else if (merchTot < 50.01) {
+		oTot = merchTot + 5;
+	}
+	else {
+		oTot = merchTot + 5 + (.03 * (merchTot - 50));
+	}
+	return oTot;
+}
+
+function addTax(tot, taxRate) {
+	return tot * taxRate;
+}
+
+var curBill = $109.99;
+var myBill = calcTot(curBill);
+var myBillPlusTax = calcTot(curBill) + addTax(curBill, .065);
+
+//or, if you wanted to tax the shipping
+myBillPlusTax = calcTot(curBill) + addTax(calcTot(curBill), .065);
+
+//or, calling a function within a function
+function calcTaxedTot(oTot, taxRate) {
+	return(calcTot(oTot) + addTax(calcTot(oTot), taxRate));
+}
+
+myBillPlusTax = calcTaxedTot(curBill, .08);
+		</pre>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+</html>

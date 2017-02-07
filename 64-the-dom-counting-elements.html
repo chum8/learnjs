@@ -1,0 +1,41 @@
+<!--  Lesson 64.  The DOM:  Counting elements -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 64. The DOM: Counting elements</title>
+	</head>
+
+	<body>
+		<ul id="d1"><li>Logan</li>
+			<li></li><li>El Paso</li>
+			<li></li><li>Lincoln</li><li>Elbert</li><li>Saguache</li><li></li></ul>
+		<a href="JavaScript:void(0)" onClick="fillEmpties();">Click here to fill empty list with place holders.</a><br />
+		<a href="JavaScript:void(0)" onClick="countFilled();">Click here to count filled nodes</a><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>	
+
+	<script>
+function fillEmpties() {
+	var liElements = document.getElementsByTagName("li");
+	var liHowMany = liElements.length;
+	for (var i = 0; i < liHowMany; i++) {
+		if (liElements[i].innerHTML === "") {
+			liElements[i].innerHTML = "Some other Colorado county";
+		}
+	}
+}
+
+function countFilled () {
+	var parentNode = document.getElementById("d1");
+	var liElements = parentNode.childNodes;
+	var k = 0;
+	for (var i = 0; i < liElements.length; i++) {
+		if (liElements[i].innerHTML !== "") {
+			++k;
+		}
+	}
+	alert(k);
+}
+	</script>
+</html>

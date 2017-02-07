@@ -1,0 +1,33 @@
+<!-- Lesson 16.  Arrays:  Adding and removing elements -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 16. Arrays: Adding and removing elements</title>
+	</head>
+
+	<body>
+	This code shows how to add and remove elements from an array.
+	<pre>
+//to declare an empty array
+var pets = [];
+
+//to add items to the array at various indices
+pets[0] = "dog";
+pets[1] = "cat";
+pets[2] = "snake";
+pets[4] = "rabbit";
+pets[129] = "gerbil"; //gaps are ok -- will leave UNDEFINED elements
+
+//to replace an existing value
+pets[2] = "pirhana";
+
+//to delete the last element
+pets.pop();
+
+//to add elements to the end of the array
+pets.push("parrot", "wolf"); 
+	</pre>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+</html>

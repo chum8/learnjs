@@ -1,0 +1,31 @@
+<!-- Lesson 56.  Target all elements by tag name -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 56. Target all elements by tag name</title>
+	</head>
+
+	<body>
+		<p>This bed be smallish.</p>
+		<p onClick="changeMiddle();">This bed be biggish. Click to change.</p>
+		<p>This bed be perfectish.</p>
+		<a href="JavaScript:void(0)" onClick="changeFonts();">Click to change the fonts by tag name</a><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function changeMiddle() {
+	var par = document.getElementsByTagName("p");
+	par[1].innerHTML = "This SUV be biggish.";
+}
+
+function changeFonts() {
+	var par = document.getElementsByTagName("p");
+	for (var i = 0; i < par.length; i++) {
+		par[i].style.fontFamily = "Times New Roman, serif";
+		par[i].style.fontSize = "19px";
+	}
+}
+	</script>
+</html>

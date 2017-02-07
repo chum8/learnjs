@@ -1,0 +1,32 @@
+<!--  Lesson 35.  Functions -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 35. Functions</title>
+	</head>
+
+	<body>This example shows how to declare and call a function.
+		<pre>
+function tellTime() {
+	var now = new Date();
+	var theHr = now.getHours();
+	var theMin = now.getMinutes();
+	alert("Current time is " + theHr + " hours and " + theMin + " minutes.");
+}
+
+tellTime(); //runs function whenever you need it
+//Note:  Typically, functions should precede the main code so they're loaded and ready to go
+		</pre>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function tellTime() {
+	var now = new Date();
+	var theHr = now.getHours();
+	var theMin = now.getMinutes();
+	alert("Current time is " + theHr + " hours and " + theMin + " minutes.");
+}
+tellTime();
+	</script>
+</html>

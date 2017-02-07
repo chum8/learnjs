@@ -1,0 +1,41 @@
+<!--  Lesson 39.  Switch statements: How to start them -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 39. Switch statements: How to start them</title>
+	</head>
+
+	<body>This code demonstrates the advantages of using switch vs. if..else if..else
+		<pre>
+var dayOfWk = "Tue";
+
+//An unwieldy way to check conditions
+if (dayOfWk === "Sat" || dayOfWk === "Sun") {
+	alert("Whoopee!");
+}
+else if (dayOfWk === "Fri" ) {
+	alert("TGIF!"); 
+}
+else {
+	alert("Shoot me now!");
+}
+
+//a better way
+switch(dayOfWk) {
+	case "Sat" :
+		alert("Whoopee!");
+		break;
+	case "Sun" :
+		alert("Whoopee!");
+		break;
+	case "Fri" :
+		alert("TGIF!");
+		break;
+	default :
+		alert("Shoot me now!");
+		break;
+}
+		</pre>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!--  Lesson 31.  Getting the current date and time-->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 31. Getting the current date and time</title>
+	</head>
+
+	<body>
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+var rightNow = new Date(); //we are creating a Date object
+
+var dateString = rightNow.toString();
+var theDay = rightNow.getDay(); //value will be 0 - 6 for different days
+
+var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+var now = new Date();
+theDay = now.getDay();
+var nameOfToday = dayNames[theDay];
+alert("It is " + nameOfToday);
+	</script>
+</html>

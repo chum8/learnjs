@@ -1,0 +1,27 @@
+<!-- Lesson 78.  Browser control:  Forward and reverse -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 78. Browser control: Forward and reverse</title>
+	</head>
+
+	<body>
+		<div id="s1">But you can go back.<a href="JavaScript:void(0)" onClick="nav1();">Click here</a></div><br /><br /><br /><br /><br /><br /><br />
+		<div id ="s2">You can even go back lots of steps.<a href="JavaScript:void(0)" onClick="nav2();">Click here</a></div><br /><br /><br /><br /><br /><br /><br />
+		<div id ="s3">Or <a href="JavaScript:void(0)" onClick="nav3();">Click here</a> to go forward.</div><br /><br /><br /><br /><br /><br /><br /></div>
+	<br /><br /><a href="index.html">Return to lesson list</a>	
+	</body>
+
+	<script>
+function nav1() {
+	history.back();
+}
+function nav2() {
+	history.go(-2);
+}
+function nav3() {
+	history.forward();
+}
+	</script>
+</html>

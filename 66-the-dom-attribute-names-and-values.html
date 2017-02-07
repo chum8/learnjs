@@ -1,0 +1,25 @@
+<!-- Lesson 66.  The DOM:  Attribute names and values -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 66. The DOM: Attribute names and values</title>
+	</head>
+
+	<body>
+		<p id="p1" class="green" onMouseover="chgColor('blue');" onMouseOut="chgColor('green');">
+			Move the mouse to change the color and list attributes of this tag.
+		</p><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function chgColor(newColor) {
+	var myList = document.getElementById("p1").attributes;
+	for (i = 0; i < myList.length; i++) {
+		document.getElementById("p1").innerHTML += "<br />" + i + ". " + myList[i].nodeValue;
+	}
+	document.getElementById("p1").setAttribute("class", newColor);
+}
+	</script>
+</html>

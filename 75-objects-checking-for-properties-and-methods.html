@@ -1,0 +1,53 @@
+<!-- Lesson 75.  Objects:  Checking for properties and methods -->
+<html>
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 75. Objects: Checking for properties and methods</title>
+	</head>
+
+	<body>Some information about the object.<br /><br /><div class="em1">Checking to see if some properties exist.</div><br/>
+		<div id="d1"></div><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function Plan(name, price, space, transfer, pages) {
+	this.name = name;
+  	this.discount = .75;
+	this.price = price;
+	this.space = space;
+	this.transfer = transfer;
+	this.pages = pages;
+}
+
+Plan.prototype.calcAnnual = function(months, theDiscount) {
+	return ((this.price * months) - ((this.price * months) * theDiscount)).toFixed(2);
+};
+
+var plan1 = new Plan("Basic", 3.99, 100, 1000, 10);
+
+		var gotTheProperty = "price" in plan1;
+		document.getElementById("d1").innerHTML = "Price exists = " + gotTheProperty + "!<br/>";
+		var gotTheProperty = "location" in plan1;
+		document.getElementById("d1").innerHTML += "Location exists = " + gotTheProperty + "!<br/>";
+		var gotTheProperty = "calcAnnual" in plan1; //note: the variable hs to go in quotation marks!
+		document.getElementById("d1").innerHTML += "calcAnnual exists = " + gotTheProperty + "!<br/>";
+
+		//lists an objects properties
+		document.getElementById("d1").innerHTML += "<br/><div class=\"em1\">Properties of plan1.</div><br/>";
+		var listOfProperties = [];
+		for (var prop in plan1) {
+			listOfProperties.push(prop);
+			document.getElementById("d1").innerHTML += prop + "<br/>";
+		}
+
+document.getElementById("d1").innerHTML += "<br/><div class=\"em1\">Properties of plan1 not including those inherited.</div><br/>";
+		var listOfProperties = [];
+		for (var prop in plan1) {
+			if (plan1.hasOwnProperty(prop)) {
+				listOfProperties.push(prop);
+				document.getElementById("d1").innerHTML += prop + "<br/>";	
+			}
+		}
+	</script>
+</html>

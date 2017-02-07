@@ -1,0 +1,36 @@
+<!-- Lesson 62.  The DOM:  More ways to target elements -->
+<html>	
+	<head>
+		<link rel="stylesheet" href="js-helper.css" style="text/css" />
+		<title>JavaScript Lesson 62. The DOM: More ways to target elements</title>
+	</head>
+
+	<body>
+		<div id="div1">
+			<div id="div2"><!-- let's seek this node -->
+				<p id="p1">Hastings</p
+				><p>Fremont</p>
+				<p>Aurora</p>
+				<p>Deshler</p>
+			</div>
+		</div>
+		<a href="JavaScript:void(0)" onClick="nodeTask1();">Click to seek a node</a><br />
+		<a href="JavaScript:void(0)" onClick="nodeTask2();">Click to seek another node</a><br /><br />
+		<a href="index.html">Return to lesson list</a>
+	</body>
+
+	<script>
+function nodeTask1() {
+	var kidNode = document.getElementById("div2");
+	var pNode = kidNode.parentNode;
+	pNode.innerHTML += "...successfully sought<br /><br />";
+}
+
+function nodeTask2() {
+	var firstE1 = document.getElementById("p1");
+	secondE1 = firstE1.nextSibling;
+	secondE1.innerHTML += "...and successfully sought";
+	nonexistentE1 = firstE1.previousSibling;
+}
+	</script>
+</html>
